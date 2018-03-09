@@ -17,7 +17,7 @@ while True:
 		values['last_message_id'] = response['items'][0]['id']
 		msg = response['items'][0]['body'].lower()
 		weathermsg = {"погода", "gjujlf", "погода сегодня", "gjujlf yf ctujlyz", "gjujlf ctujlyz", "погода на сегодня"}
-		weathermsg2 = {"погода на завтра", "gjujlf yf pfdnhf"}
+		weathermsg2 = {"погода на завтра", "gjujlf yf pfdnhf", "gjujlf pfdnhf", "погода завтра"}
 		weat.main()
 		if msg in weathermsg:
 			for item in response['items']:
