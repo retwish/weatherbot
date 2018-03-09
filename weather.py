@@ -48,10 +48,12 @@ def parse(url):
 	p8      = icos.find('td', class_="p8")
 	p8info  = p8.find('div', title=True)
 
-	warning = b.find('div', class_="oWarnings clearfix")
-	warinfo = warning.select('.rSide .description')
-	warn  = warinfo[0].getText()
-	
+	try:
+		warning = b.find('div', class_="oWarnings clearfix")
+		warinfo = warning.select('.rSide .description')
+		warn  = warinfo[0].getText()
+	except AttributeError:
+		warn = "погодных проишествий сегодня не наблюдается"
 
 	descrip = b.find('div', class_="wDescription clearfix")
 	desinfo = descrip.select('.rSide .description')
@@ -121,9 +123,12 @@ def next_day(url1):
 	p8      = icos.find('td', class_="p8")
 	p8info  = p8.find('div', title=True)
 
-	warning = b.find('div', class_="oWarnings clearfix")
-	warinfo = warning.select('.rSide .description')
-	warn  = warinfo[0].getText()
+	try:
+		warning = b.find('div', class_="oWarnings clearfix")
+		warinfo = warning.select('.rSide .description')
+		warn  = warinfo[0].getText()
+	except AttributeError:
+		warn = "погодных проишествий сегодня не наблюдается"
 	
 
 	descrip = b.find('div', class_="wDescription clearfix")
