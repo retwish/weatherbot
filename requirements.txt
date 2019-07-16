@@ -2,6 +2,6 @@ beautifulsoup4==4.6.0
 bs4==0.0.1
 psutil==5.3.1
 python-dateutil==2.6.1
-requests==2.18.4
+requests==2.20.0
 requirements==0.1
 vk-api==9.3
